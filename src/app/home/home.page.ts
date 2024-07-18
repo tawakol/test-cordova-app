@@ -9,15 +9,8 @@ import { InAppBrowser } from '@awesome-cordova-plugins/in-app-browser/ngx';
   imports: [IonButton, IonHeader, IonToolbar, IonTitle, IonContent],
   providers: [InAppBrowser]
 })
-export class HomePage implements OnInit {
-  constructor(private inAppBrowser: InAppBrowser) {
-
-    
-  }
-
-  ngOnInit() {
-    
-  }
+export class HomePage {
+  constructor(private inAppBrowser: InAppBrowser) {}
 
   launchSpareApp() {
     this.inAppBrowser.create('https://spare-parent-rcph76b7h-spare.vercel.app/auth/welcome?vercelToolbarCode=Z3slT8Zrg22Pxle', '_blank');
